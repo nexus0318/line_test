@@ -20,7 +20,7 @@ app.post('/callback', (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(process.env.PORT, () => console.log(process.env.PORT));
 
 function sendTextMessage(sender, text) {
 
