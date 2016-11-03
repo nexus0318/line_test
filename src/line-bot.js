@@ -20,7 +20,7 @@ app.post('/callback', (req, res) => {
     console.log('source: ', jsonData.events[0].message);
 
 
-    sendTextMessage(jsonData.events[0].replyToken, jsonData.events[0].message);
+    sendTextMessage(jsonData.events[0].replyToken, jsonData.events[0].message.text);
   
 });
 
