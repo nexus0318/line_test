@@ -16,7 +16,7 @@ app.post('/callback', (req, res) => {
   for(let i=0; i<result.length; i++){
     const data = result[i]['content'];
     console.log('receive: ', data);
-    sendTextMessage(data.from, data.text);
+    //sendTextMessage(data.from, data.text);
   }
 });
 
