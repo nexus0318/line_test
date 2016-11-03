@@ -13,12 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/callback', (req, res) => {
  // const result = req.body.result;
- 
-    console.log('receive: ', req.body);
-    console.log('type: ', req.body.type);
-    console.log('replyToken: ', req.body.replyToken);
-    console.log('source: ', req.body.source);
-    console.log('message: ', req.body.message);
+    var jsonData = JSON.parse( req.body);
+    console.log('receive: ', jsonData);
+    console.log('type: ', jsonData.events[0].type);
+    console.log('replyToken: ', jsonData.events[0].replyToken);
+    console.log('source: ', jsonData.events[0].message);
+
 
     //sendTextMessage(data.from, data.text);
   
