@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/callback', (req, res) => {
  // const result = req.body.result;
-    var jsonData = JSON.parse( req.body);
+    var jsonData = req.body ;
     console.log('receive: ', jsonData);
     console.log('type: ', jsonData.events[0].type);
     console.log('replyToken: ', jsonData.events[0].replyToken);
