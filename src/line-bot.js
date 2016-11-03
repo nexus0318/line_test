@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/callback', (req, res) => {
-  const result = req.body.result;
+ // const result = req.body.result;
  
-    console.log('receive: ', result);
+    console.log('receive: ', req.body);
     //sendTextMessage(data.from, data.text);
   
 });
