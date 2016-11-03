@@ -15,6 +15,11 @@ app.post('/callback', (req, res) => {
  // const result = req.body.result;
  
     console.log('receive: ', req.body);
+    console.log('type: ', req.body.type);
+    console.log('replyToken: ', req.body.replyToken);
+    console.log('source: ', req.body.source);
+    console.log('message: ', req.body.message);
+
     //sendTextMessage(data.from, data.text);
   
 });
