@@ -31,6 +31,10 @@ app.post('/callback', (req, res) => {
     {
        sendTextMessage(jsonData.events[0].replyToken, "好帥<3");
     }
+    else
+    {
+      sendTextMessage(jsonData.events[0].replyToken, "t");
+    }
   
 });
 
