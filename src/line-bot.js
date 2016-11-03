@@ -19,8 +19,18 @@ app.post('/callback', (req, res) => {
     console.log('replyToken: ', jsonData.events[0].replyToken);
     console.log('source: ', jsonData.events[0].message);
 
-
-    sendTextMessage(jsonData.events[0].replyToken, jsonData.events[0].message.text);
+    if(jsonData.events[0].message.toString().indexOf("卡米狗;") !== -1)
+    {
+       sendTextMessage(jsonData.events[0].replyToken, "廢物還想教我說話?");
+    }
+    else if(jsonData.events[0].message.toString().indexOf("卡米狗") !== -1)
+    {
+       sendTextMessage(jsonData.events[0].replyToken, "叫我衝三小");
+    }
+    else if(jsonData.events[0].message.toString().indexOf("York") !== -1)
+    {
+       sendTextMessage(jsonData.events[0].replyToken, "好帥<3");
+    }
   
 });
 
