@@ -39,6 +39,10 @@ app.post('/callback', (req, res) => {
     {
        sendTextMessage(jsonData.events[0].replyToken, "好帥<3");
     }
+    else if(jsonData.events[0].message.text.toString().indexOf("Curtis") !== -1)
+    {
+       sendTextMessage(jsonData.events[0].replyToken, "三峽宋仲基❤❤");
+    }
   
 });
 
