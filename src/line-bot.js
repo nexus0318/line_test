@@ -26,13 +26,13 @@ app.post('/callback', (req, res) => {
 
 app.listen(process.env.PORT || port, () => console.log(port));
 
-function sendTextMessage(replyToken, text) {
+function sendTextMessage(replyToken, msg) {
 
   const data = {
     replyToken: replyToken,
     messages: {
       type: text,
-      text: text
+      text: msg
     }
   };
 
