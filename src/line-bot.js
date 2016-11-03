@@ -30,10 +30,10 @@ function sendTextMessage(replyToken, msg) {
 
   const data = {
     replyToken: replyToken,
-    messages: {
+    messages: [{
       type: 'text',
       text: msg
-    }
+    }]
   };
 
   console.log('send: ', data);
