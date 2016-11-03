@@ -13,11 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/callback', (req, res) => {
   const result = req.body.result;
-  for(let i=0; i<result.length; i++){
-    const data = result[i]['content'];
-    console.log('receive: ', data);
+ 
+    console.log('receive: ', result);
     //sendTextMessage(data.from, data.text);
-  }
+  
 });
 
 app.listen(process.env.PORT || port, () => console.log(port));
