@@ -6,7 +6,7 @@ import config from '../config';
 const app = express();
 const port = '443';
 const { CHANNEL_ID, CHANNEL_SERECT, MID } = {...config};
-const LINE_API = 'https://trialbot-api.line.me/v1/events';
+const LINE_API = 'https://api.line.me/v2/bot/message/reply';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
